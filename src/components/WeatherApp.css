@@ -1,0 +1,126 @@
+/* Root container locked to full screen */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* center vertically */
+  height: 100vh; /* full fixed height */
+  width: 100%;
+  background: linear-gradient(to bottom right, #0f172a, #8a7c1e);
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden; /* prevent scroll */
+}
+
+/* Title */
+.weather-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, rgb(14, 232, 68), #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+
+.input-box {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  color: black;
+  background: white;
+  min-width: 0;
+}
+
+.search-button {
+  padding: 0 1.2rem;
+  border: none;
+  background: linear-gradient(to right, rgb(14, 232, 68), #f59e0b);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  color: black;
+}
+
+/* Weather info */
+.weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+}
+.weather-card:hover{
+     background-color: #887d51;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.icon {
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  background: linear-gradient(to right, rgb(14, 232, 68), #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.description {
+  text-transform: capitalize;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .weather-title {
+    font-size: 1.4rem;
+  }
+
+  .input-box,
+  .search-button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .temperature {
+    font-size: 1.5rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+
+  .search-box {
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,89 @@
+.weather-card {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ font-weight: bolder;
+}
+
+.location {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  background: linear-gradient(to right, orange, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.description {
+  text-transform: capitalize;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* Rain Forecast Slider */
+.rain-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.rain-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.rain-slider::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.rain-card {
+  flex: 0 0 auto;
+  min-width: 140px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  color: white;
+  text-align: center;
+}
+
+.rain-time {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .location {
+    font-size: 1rem;
+  }
+  .temperature {
+    font-size: 1.4rem;
+  }
+  .rain-card {
+    min-width: 120px;
+    padding: 0.75rem;
+  }
+  .rain-time {
+    font-size: 0.85rem;
+  }
+}

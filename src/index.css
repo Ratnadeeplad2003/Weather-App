@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent all scroll */
+  height: 100%;
+  
+  font-family: 'Poppins', sans-serif;
+  
+
+
+}
+h1, h2, h3 {
+  font-weight: 700;
+  font-size: 2rem; /* adjust as needed */
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
