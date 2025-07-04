@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Select } from "antd";
 import "./Cards.css";
+
+const { Option } = Select;
 
 const Cards = ({
   icon,
@@ -26,21 +29,31 @@ const Cards = ({
   return (
     <div className="weather-card">
       <div className="unit-select">
-        <label htmlFor="unit">Temperature Unit: </label>
-        <select id="unit" value={unit} onChange={(e) => setUnit(e.target.value)}>
-          <option value="C">Celsius</option>
-          <option value="F">Fahrenheit</option>
-        </select>
+        <label htmlFor="unit" className="unit-label">
+          Temperature Unit:
+        </label>
+        <Select
+          id="unit"
+          value={unit}
+          onChange={(value) => setUnit(value)}
+          className="unit-dropdown"
+          style={{ width: 150 }}
+        >
+          <Option value="C">Celsius</Option>
+          <Option value="F">Fahrenheit</Option>
+        </Select>
       </div>
 
       <div className="icon">{icon}</div>
       <h2 className="location">{location}</h2>
       <p className="temperature">{convertTemp(temp)}</p>
       <p className="description">{description}</p>
-      <p>Humidity: {humidity}% | Wind: {convertWind(wind)}</p>
-      <p>Feels Like: {convertTemp(feelsLike)}</p>
-      <p>Sunrise: {sunrise} AM</p>
-      <p>Sunset: {sunset} PM</p>
+      <p className="description">
+        Humidity: {humidity}% | Wind: {convertWind(wind)}
+      </p>
+      <p className="description">Feels Like: {convertTemp(feelsLike)}</p>
+      <p className="description">Sunrise: {sunrise} AM</p>
+      <p className="description">Sunset: {sunset} PM</p>
     </div>
   );
 };

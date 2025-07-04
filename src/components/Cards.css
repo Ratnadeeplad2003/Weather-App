@@ -5,53 +5,97 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 1.5rem;
-  text-align: center;
   width: 100%;
   max-width: 500px;
+  text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
- font-weight: bolder;
 }
-
+.weather-card:hover{
+ transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background-color: rgb(150, 198, 228);
+  color: black;
+}
 .location {
-  font-size: 1.25rem;
+  font-size: 1.rem;
   font-weight: 600;
   margin: 0.5rem 0;
-  background: linear-gradient(to right, orange, #f59e0b);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .temperature {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin: 0.5rem 0;
+  border-radius: 20px;
 }
 
 .description {
   text-transform: capitalize;
-  font-style: italic;
+  font-style: bold;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.unit-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.unit-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+.unit-dropdown .ant-select-selector {
+  border-radius: 10px !important;
+  height: 40px !important;
+  padding: 0 12px !important;
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Rain Forecast Slider */
+.unit-dropdown .ant-select-selection-item {
+  font-weight: 500;
+  color: black;
+}
+
+.unit-dropdown .ant-select-arrow {
+  color: black;
+}
+#unit{
+  font-size: 19px;
+  border-radius: 20px;
+ 
+}
+#unit1{
+  color: black;
+}
+
 .rain-slider {
   display: flex;
   overflow-x: auto;
   gap: 1rem;
-  margin-top: 1rem;
   padding-bottom: 0.5rem;
   scroll-snap-type: x mandatory;
+  width: 100%;
 }
 
 .rain-slider::-webkit-scrollbar {
-  height: 8px;
+  height: 10px;
 }
 
 .rain-slider::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .rain-card {
@@ -65,6 +109,9 @@
   scroll-snap-align: start;
   color: white;
   text-align: center;
+}
+.rain-card:hover{
+  color: black;
 }
 
 .rain-time {
